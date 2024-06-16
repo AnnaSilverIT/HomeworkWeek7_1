@@ -1,0 +1,119 @@
+header {
+    display: flex;
+    width: 100%;
+    background-color: grey;
+    max-height: 100px;
+    min-height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    height: 415px;
+}
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-end;
+    background-color: rgb(231, 231, 183);
+    width: calc(100% / 3 * 2);
+    height: 100%;
+}
+
+article {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    align-items: center;
+    background-color: rgb(11, 170, 117);
+    width: calc(100% / 3);
+    height: 90%;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 125px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: gray;
+}
+.inner_p {
+    display: flex;
+    max-width: 45%;
+    min-width: 70px;
+    height: 20%;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background-color: yellowgreen;
+    padding: 5px 8px;
+    margin: 10px;
+    align-items: center;
+
+}
+.inner_pdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellowgreen;
+    width: 90%;
+    height: 20%;
+    margin-left: 40px;
+    
+}
+
+.footerdiv {
+    padding: 20px;
+    background-color: rgb(181, 214, 116);
+}
+
+
+@media screen and (max-width: 425px) {
+    header {
+        padding: 5px;
+    }
+    .container {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        min-height: fit-content;
+    }
+    .box {
+        grid-row: 1/2;
+        min-width: 100%;
+        justify-content: center;
+    }
+    article {
+        grid-row: 2/3;
+        max-width: 100%;
+        min-width: fit-content;
+        min-height: fit-content;
+        margin: 0;
+    }
+
+    .inner_p {
+        min-height: fit-content;
+        min-width: fit-content;
+        max-height: 20px;
+    }
+
+    .inner_pdown  {
+        min-width: fit-content;
+        min-height: fit-content;
+        max-height: 30px;
+    }
+
+    footer {
+        padding: 10px;
+        min-height: 150px;
+    }
+    .footerdiv {
+        max-height: fit-content;
+        max-width: fit-content;
+        margin: 5px;
+        padding: 5px;
+    }
+}
